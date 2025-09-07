@@ -16,7 +16,7 @@ Eine einfach zu verwendende, modulare LaTeX-Vorlage für Seminararbeiten, Bachel
 
 ## Schnellstart
 
-Öffne das Projekt in [Overleaf](https://www.overleaf.com/read/nrmrmjvwwhnv#ddfbfb) und beginne sofort mit deiner Arbeit. Keine lokale Einrichtung erforderlich.
+Öffne das Projekt in [Overleaf](https://www.overleaf.com/read/nrmrmjvwwhnv#ddfbfb). Klicke oben links auf `Menu → Copy Project`, um eine eigene Kopie des Projekts zu erstellen. Danach kannst du sofort mit deiner Arbeit beginnen. Keine lokale Einrichtung erforderlich. Je nach Projektgröße könnte die kostenlose Overleaf-Version eventuell nicht ausreichen.
 
 [![Overleaf](https://img.shields.io/badge/Open_in-Overleaf-47A141?style=for-the-badge&logo=overleaf)](https://www.overleaf.com/read/nrmrmjvwwhnv#ddfbfb)
 
@@ -90,6 +90,11 @@ Oder alternativ einfach folgenden Befehl ausführen:
 - Fehlende Pakete: Installiere die benötigten TeX-Pakete oder wechsle zu `texlive-full`.
 - Bibliographie wird nicht aktualisiert: Stelle sicher, dass `biber Thesis-Template` ausgeführt wird (oder `make`).
 - Glossar/Abkürzungen fehlen: Führe `makeglossaries Thesis-Template` aus und kompiliere erneut.
+
+# Contributing
+
+Dieses Repository ist ein persönliches Template. Beiträge (Bug-Reports, kleine Fixes, Vorschläge) sind über Issues oder Pull Requests willkommen.  
+Bevor du größere Änderungen einreichst, eröffne bitte zuerst ein Issue, um den Vorschlag zu besprechen.
 
 ## Disclaimer
 
