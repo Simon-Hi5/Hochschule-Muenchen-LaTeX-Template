@@ -16,9 +16,9 @@ Eine einfach zu verwendende, modulare LaTeX-Vorlage für Seminararbeiten, Bachel
 
 ## Schnellstart
 
-Öffne das Projekt in [Overleaf](https://www.overleaf.com/latex/templates/your-template-link) und beginne sofort mit deiner Arbeit. Keine lokale Einrichtung erforderlich.
+Öffne das Projekt in [Overleaf](https://www.overleaf.com/read/nrmrmjvwwhnv#ddfbfb). Klicke oben links auf `Menu → Copy Project`, um eine eigene Kopie des Projekts zu erstellen. Danach kannst du sofort mit deiner Arbeit beginnen. Keine lokale Einrichtung erforderlich. Je nach Projektgröße könnte die kostenlose Overleaf-Version eventuell nicht ausreichen.
 
-[![Overleaf](https://img.shields.io/badge/Open_in-Overleaf-47A141?style=for-the-badge&logo=overleaf)](https://www.overleaf.com/latex/templates/your-template-link)
+[![Overleaf](https://img.shields.io/badge/Open_in-Overleaf-47A141?style=for-the-badge&logo=overleaf)](https://www.overleaf.com/read/nrmrmjvwwhnv#ddfbfb)
 
 Oder kompiliere lokal, was für Offline-Arbeiten empfohlen wird. Siehe [lokale Einrichtung](#lokale-einrichtung) unten.
 
