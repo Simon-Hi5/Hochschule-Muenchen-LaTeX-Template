@@ -1,44 +1,96 @@
-# Hochschule-Muenchen-LaTeX-Template
+[![Deutsch](https://img.shields.io/badge/DE-Deutsch-0A84FF?style=for-the-badge&logo=google-translate&logoColor=0A84FF)](https://github.com/Simon-Hi5/Hochschule-Muenchen-LaTeX-Template)&emsp;
+[![English](https://img.shields.io/badge/EN-English-lightgrey?style=for-the-badge&logo=google-translate&logoColor=lightgrey)](https://github.com/Simon-Hi5/Hochschule-Muenchen-LaTeX-Template/tree/english)
 
-Mein persönliches LaTeX Template für die Erstellung von Seminar-, Bachelor- oder Masterarbeiten an der Hochschule München.
+# LaTeX-Vorlage für Abschlussarbeiten an der Hochschule München
 
-## Voraussetzungen
+Eine einfach zu verwendende, modulare LaTeX-Vorlage für Seminararbeiten, Bachelor- und Masterarbeiten, angepasst an die an der Hochschule München üblichen Konventionen. Dieses Repository enthält ein komplettes Beispielprojekt, das direkt in Overleaf geöffnet oder lokal kompiliert werden kann.
 
-- LaTeX-Distribution mit pdflatex und Biber als Backend für BibLaTeX
-- LaTeX-Editor
+[![View PDF](https://img.shields.io/badge/View-Thesis_Template-red?style=for-the-badge&logo=readdotcv&logoColor=red)](Thesis-Template.pdf)
 
-## Benutzung
+## Highlights
 
-1. Dieses Repository klonen oder herunterladen
-2. `bachelor-thesis.tex` mit beliebigem LaTeX-Editor öffnen und mit pdflatex ausführen
+- Modulare Struktur: separate Dateien für Frontmatter, Kapitel, Konfiguration und Backmatter.
+- Vorkonfigurierte Bibliographie-Unterstützung mit BibLaTeX und Biber.
+- Unterstützung für Abbildungen, Tabellen, Algorithmen/Pseudocode, Code-Listings, Abkürzungen/Glossare und Anhänge.
+- Ein Makefile für einen einfachen Build-Workflow.
 
-## Aufbau der Arbeit
+## Schnellstart
 
-- Titelblatt
-- Abstract
-- Inhaltsverzeichnis
-- Abbildungsverzeichnis
-- Tabellenverzeichnis
-- Quellcodeverzeichnis
-- Abkürzungsverzeichnis
-- Inhalt
-- Literarturverzeichnis
-- Selbständigkeitserklärung
+Öffne das Projekt in [Overleaf](https://www.overleaf.com/latex/templates/your-template-link) und beginne sofort mit deiner Arbeit. Keine lokale Einrichtung erforderlich.
+
+[![Overleaf](https://img.shields.io/badge/Open_in-Overleaf-47A141?style=for-the-badge&logo=overleaf)](https://www.overleaf.com/latex/templates/your-template-link)
+
+Oder kompiliere lokal, was für Offline-Arbeiten empfohlen wird. Siehe [lokale Einrichtung](#lokale-einrichtung) unten.
 
 ## Projektstruktur
 
-- `chapters`:  Enthählt die Kapitel der Arbeit
-- `figures`: Enthählt Bilder und Grafiken der Arbeit
-- `logos`: Enhält Logos für die Arbeit
-- `pages`: Enthält die Seiten für das Abstract, das Abkürzungsverzeichnis und das Titelblatt
-- `bachelor-thesis.tex`: Herzstück des Projektes, fügt alle Komponenten zu einer Arbeit zusammen
-- `bibliography.bib`: Enhält die Literaturangaben für die Arbeit
-- `settings.sty`: Enthält Einstellungen für die gesamte Arbeit
+```
+├── Thesis-Template.tex     # Hauptdatei (beinhaltet Konfiguration und Inhalte)
+├── makefile                # Komfortabler Wrapper für Build-Schritte
+│
+├── config/                 # Konfigurationsdateien
+│ ├── packages.tex          # Paketimporte und allgemeine LaTeX-Einstellungen
+│ ├── settings.tex          # Dokumentenspezifische Einstellungen (Titel, Autor, etc.)
+│ ├── abbreviations.tex     # Glossar/Abkürzungsdefinitionen
+│ └── literature.bib        # BibLaTeX-Bibliographie-Datei
+│
+├── frontmatter/            # Modulares Frontmatter
+│ ├── titlepage.tex
+│ ├── abstract.tex
+│ ├── acknowledgments.tex
+│ └── confidentiality.tex
+│
+├── chapters/               # Hauptkapitel
+│ ├── 01_introduction.tex
+│ ├── 02_background.tex
+│ ├── ...
+│ └── 06_conclusion.tex
+│
+├── backmatter/             # Anhänge und Erklärungen
+│ ├── appendix.tex
+│ └── declaration.tex
+│
+└── figures/                # Abbildungen, Logos und andere Assets
+```
 
-## Literaturverzeichnis
+Beim Hinzufügen neuer TeX-Dateien binde sie in `Thesis-Template.tex` mit `\input{path/to/file.tex}` ein.
 
-Für das Literaturverzeichnis und Zitate wird BibLaTex verwendet. Die Literaturangaben werden in `bibliography.bib` eingefügt. Als Backend wird Biber verwendet.
+## Anwendungsbeispiele
 
-## Lizenz
+- Siehe die Beispielinhalte in `chapters/` für Beispiele, wie Abbildungen, Tabellen, Algorithmen, Code-Listings und andere gängige Elemente hinzugefügt und referenziert werden.
+- Bibliographieeinträge werden in `config/literature.bib` definiert.
+- Abkürzungen werden in `config/abbreviations.tex` definiert.
 
-Dieses Projekt ist unter den Bedingungen der [MIT Lizenz](http://en.wikipedia.org/wiki/MIT_License) öffentlich verfügbar.
+## Lokale Einrichtung
+
+### Voraussetzungen
+
+- Eine TeX-Distribution (TeX Live empfohlen).
+- Biber (für Bibliographie-Verarbeitung).
+- make (optional, das Makefile bündelt die Build-Befehle).
+
+Unter Linux (Debian/Ubuntu) können die Grundlagen mit folgendem Befehl installiert werden:
+
+`sudo apt install texlive-extra biber make`
+
+### PDF-Erstellung
+
+1. `pdflatex -synctex=1 -interaction=nonstopmode Thesis-Template.tex`
+2. `biber Thesis-Template`
+3. `makeglossaries Thesis-Template`
+4. `pdflatex -synctex=1 -interaction=nonstopmode Thesis-Template.tex`
+5. `pdflatex -synctex=1 -interaction=nonstopmode Thesis-Template.tex`
+
+Oder alternativ einfach folgenden Befehl ausführen:
+
+`make`
+
+### Fehlerbehebung
+
+- Fehlende Pakete: Installiere die benötigten TeX-Pakete oder wechsle zu `texlive-full`.
+- Bibliographie wird nicht aktualisiert: Stelle sicher, dass `biber Thesis-Template` ausgeführt wird (oder `make`).
+- Glossar/Abkürzungen fehlen: Führe `makeglossaries Thesis-Template` aus und kompiliere erneut.
+
+## Disclaimer
+
+Dieses LaTeX-Template ist eine private Entwicklung und kein offizielles Template der Hochschule München. Es wird unter der MIT-Lizenz veröffentlicht. Das in diesem Repository enthaltene Logo der Hochschule München ist urheberrechtlich geschützt und Eigentum der Hochschule München. Es unterliegt nicht der MIT-Lizenz dieses Projekts. Alle Rechte am Logo (einschließlich Urheber-, Marken- und Nutzungsrechte) verbleiben ausschließlich bei der Hochschule München. Die Verwendung des Logos in wissenschaftlichen Arbeiten (z.B. Abschlussarbeiten) ist in der Regel gestattet, die Verantwortung für eine rechtmäßige Nutzung liegt jedoch bei den Anwender:innen selbst.

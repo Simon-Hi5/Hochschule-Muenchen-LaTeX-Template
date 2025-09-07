@@ -1,0 +1,75 @@
+\chapter{Implementierung}
+\label{chap:implementation}
+
+\section{Formeln}
+
+Man kann Formeln wie folgt einfügen: Das Dateiverarbeitungsproblem kann wie folgt modelliert werden. Eine Datei $F$ der Größe $S$ Bytes, aufgeteilt in Blöcke mit maximaler Größe $c$, ist:
+\[ F = \langle B_1, B_2, \ldots, B_m \rangle, \qquad m = \left\lceil \frac{S}{c} \right\rceil \]
+
+\section{Algorithmen}
+
+Man kann Algorithmen mithilfe von Pseudocode wie folgt darstellen:
+
+\begin{algorithm}[htbp]
+    \caption{Blockbasierte Dateiverarbeitung mit Hashing.}
+    \label{algo:filehash}
+    \begin{algorithmic}[1]
+        \Require Datei $F$, Blockgröße $c$
+        \Ensure Datensatz $\langle size, block\_count, sha256 \rangle$
+
+        \State $h \gets \textsc{InitSHA256}()$ \Comment{Initialisiere Digest.}
+        \State $size \gets \textsc{Length}(F)$
+        \State $block\_count \gets 0$
+        \Statex
+
+        \ForAll{$block \in \textsc{Read}(F, c)$}
+            \State $\textsc{Update}(h, block)$
+            \State $block\_count \gets block\_count + 1$
+        \EndFor
+        \Statex
+
+        \State $sha256 \gets \textsc{Finalize}(h)$
+        \State \Return $\langle size, block\_count, sha256 \rangle$
+    \end{algorithmic}
+\end{algorithm}
+
+Man kann auf Algorithmen wie folgt verweisen: Algorithmus~\ref{algo:filehash} beschreibt einen blockbasierten Dateiverarbeitungsalgorithmus.
+
+\section{Listen und Aufzählungen}
+
+Man kann Listen und Aufzählungen wie folgt erstellen:
+
+\begin{enumerate}
+  \item Initialisiere einen SHA-256-Digest und lese die Dateigröße.
+  \item Lese die Datei in Blöcken von maximal $c$ Bytes.
+  \item Aktualisiere für jeden Block den Digest und erhöhe den Blockzähler.
+  \item Finalisiere den Digest, um den Hash zu erhalten.
+  \item Gib $\langle size,\ block\_count,\ sha256 \rangle$ zurück.
+\end{enumerate}
+
+\subsection{Codebeispiele}
+
+Man kann Quellcode einfügen, zum Beispiel Python-Code, wie folgt:
+
+\begin{lstlisting}[float=htb, caption={Quellcode des Dateiverarbeitungsalgorithmus.}, label={lst:filehash}]
+import hashlib
+from pathlib import Path
+
+def process_file(path: str, chunk_size: int = 1 << 20):
+    p = Path(path)
+    h = hashlib.sha256()
+    with p.open("rb") as f:
+        while True:
+            b = f.read(chunk_size)
+            if not b:
+                break
+            h.update(b)
+    return {
+        "file": p.name,
+        "size_bytes": p.stat().st_size,
+        "sha256": h.hexdigest()
+    }
+
+if __name__ == "__main__":
+    print(process_file("example.dat"))
+\end{lstlisting}
