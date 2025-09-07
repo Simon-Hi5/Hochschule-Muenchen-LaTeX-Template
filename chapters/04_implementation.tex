@@ -1,0 +1,75 @@
+\chapter{Implementation}
+\label{chap:implementation}
+
+\section{Formulas}
+
+You can include formulas like this: The file processing problem can be modeled as follows. A file $F$ of size $S$ bytes split into chunks of size at most $c$ is:
+\[ F = \langle B_1, B_2, \ldots, B_m \rangle, \qquad m = \left\lceil \frac{S}{c} \right\rceil \]
+
+\section{Algorithms}
+
+You can describe algorithms using pseudocode like this:
+
+\begin{algorithm}[htbp]
+    \caption{Chunk-based file processing with hashing.}
+    \label{algo:filehash}
+    \begin{algorithmic}[1]
+        \Require File $F$, chunk size $c$
+        \Ensure Record $\langle size, chunk\_count, sha256 \rangle$
+
+        \State $h \gets \textsc{InitSHA256}()$ \Comment{Initialize digest.}
+        \State $size \gets \textsc{Length}(F)$
+        \State $chunk\_count \gets 0$
+        \Statex
+
+        \ForAll{$chunk \in \textsc{Read}(F, c)$}
+            \State $\textsc{Update}(h, chunk)$
+            \State $chunk\_count \gets chunk\_count + 1$
+        \EndFor
+        \Statex
+
+        \State $sha256 \gets \textsc{Finalize}(h)$
+        \State \Return $\langle size, chunk\_count, sha256 \rangle$
+    \end{algorithmic}
+\end{algorithm}
+
+You can refer to algorithms like this: Algorithm~\ref{algo:filehash} describes a chunk-based file processing algorithm.
+
+\section{Lists and Enumerations}
+
+You can create lists and enumerations like this:
+
+\begin{enumerate}
+  \item Initialize a SHA-256 digest and read the file size.
+  \item Stream the file in chunks of at most $c$ bytes.
+  \item For each chunk, update the digest and increment the chunk counter.
+  \item Finalize the digest to obtain the hash.
+  \item Return $\langle size,\ chunk\_count,\ sha256 \rangle$.
+\end{enumerate}
+
+\subsection{Code Listings}
+
+You can include source code listings, for example Python code, like this:
+
+\begin{lstlisting}[float=htb, caption={Source code of the file processing algorithm.}, label={lst:filehash}]
+import hashlib
+from pathlib import Path
+
+def process_file(path: str, chunk_size: int = 1 << 20):
+    p = Path(path)
+    h = hashlib.sha256()
+    with p.open("rb") as f:
+        while True:
+            b = f.read(chunk_size)
+            if not b:
+                break
+            h.update(b)
+    return {
+        "file": p.name,
+        "size_bytes": p.stat().st_size,
+        "sha256": h.hexdigest()
+    }
+
+if __name__ == "__main__":
+    print(process_file("example.dat"))
+\end{lstlisting}

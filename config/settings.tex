@@ -1,0 +1,125 @@
+% Bibliography file
+\addbibresource{config/literature.bib}
+
+% Do not stretch the page contents to the bottom
+\raggedbottom
+
+% Reduce hyphenation
+\tolerance=500
+\emergencystretch=2em
+\hyphenpenalty=500
+\exhyphenpenalty=500
+
+% Reduce widows and orphans
+\widowpenalties=4 10000 10000 500 0
+\clubpenalties=4 10000 10000 500 0
+
+% Reduce page breaks in paragraphs
+\interlinepenalty=500
+
+% Margins (Left, Right, Top, Bottom)
+\marginsize{25mm}{25mm}{20mm}{20mm}
+
+% Chapter title formatting
+\titleformat{\chapter}
+  {\Huge\bfseries}   % format
+  {\thechapter}      % label
+  {10pt}             % sep
+  {}                 % before-code
+
+% Redefine command for vertical centering text in X column (tabularx)
+\renewcommand\tabularxcolumn[1]{m{#1}}
+
+% Include chapter number in algorithm numbering.
+\renewcommand{\thealgorithm}{\thechapter.\arabic{algorithm}}
+
+% Add double colon after algorithm numbering.
+\captionsetup[algorithm]{labelsep=colon}
+
+% Redefine title for list of code listings
+\renewcommand{\lstlistlistingname}{List of Code Listings}
+
+% Styling for code listings
+\definecolor{stringcolor}{cmyk}{0.8, 0.0, 0.8, 0.2}
+\definecolor{commentcolor}{cmyk}{0.0, 0.0, 0.0, 0.5}
+\definecolor{emphcolor}{cmyk}{1.0, 0.6, 0.0, 0.2}
+\definecolor{keywordcolor}{cmyk}{0.0, 0.5, 1.0, 0.2}
+
+% Define a custom style for listings
+\lstdefinestyle{custom_listing_style}{
+    language=Python,
+    basicstyle=\ttfamily\small,
+    columns=fullflexible,
+    keepspaces=true,
+    frame=tb,
+    rulecolor=\color{black},
+    numbers=left,
+    xleftmargin=2em,
+    framexleftmargin=1.5em,
+    numberstyle=\scriptsize,
+    numbersep=8pt,
+    stepnumber=1,
+    breaklines=true,
+    tabsize=4,
+    belowcaptionskip=12pt,
+    showstringspaces=false
+    morekeywords={self},
+    sensitive=true,
+    emph={}, 
+    morestring=[b]",
+    morecomment=[l]{//},
+    keywordstyle=\color{keywordcolor},
+    stringstyle=\color{stringcolor},
+    commentstyle=\color{commentcolor},
+    emphstyle=\color{emphcolor},
+    escapeinside={(*@}{@*)}
+}
+\lstset{style=custom_listing_style}
+
+% Increase vertical padding for tables
+\renewcommand{\arraystretch}{1.5}
+
+% Header and footer
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\fancyhead[L]{\thechapter\hspace{1.0em}\leftmark}
+\fancyhead[R]{}
+\fancyfoot[C]{\thepage}
+
+% Adjust headheight for header
+\setlength{\headheight}{15pt}
+
+% Adjust algpseudocodex keywords
+\algrenewcommand\algorithmicrequire{Input:}
+\algrenewcommand\algorithmicensure{Output:}
+
+% Definition of custom glossary style for list of abbreviations
+\newglossarystyle{customglossarystyle}{
+  \setglossarystyle{long}
+
+  % Adjust list of abbreviations to full text width
+  \renewenvironment{theglossary}
+  {
+    \setlength{\tabcolsep}{2pt}%
+    \begin{longtable}[l]{@{}p{2.5cm}@{}p{\dimexpr\linewidth-2.5cm}@{}}
+  }
+  {
+    \end{longtable}
+  }
+
+  % Use dotfill with same style as in table of contents
+  \newcommand\Dotfill{\cftdotfill{\cftsecdotsep}}
+  \renewcommand{\cftchapleader}{\cftdotfill{\cftsecdotsep}}
+  \renewcommand{\glspostdescription}{\Dotfill}
+
+  % Adjust space between title and list of abbreviations
+  \setglossarypreamble[acronym]{\vspace{-0.5cm}}
+
+  % Bold font for abbreviations
+  \renewcommand{\glsnamefont}[1]{\textbf{##1}}
+}
+
+% Set up glossaries, acronyms, and abbreviations
+\makeglossaries
+
+% Set abbreviation style for acronyms
+\setabbreviationstyle[acronym]{long-short}

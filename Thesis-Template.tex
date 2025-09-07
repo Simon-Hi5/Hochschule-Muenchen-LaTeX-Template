@@ -1,0 +1,59 @@
+\documentclass[a4paper,12pt,oneside]{book}
+
+\input{config/packages.tex}
+\input{config/settings.tex}
+\input{config/abbreviations.tex}
+
+\begin{document}
+
+    \frontmatter
+    \pagestyle{plain}
+        % Uppercase Roman page numbering for front matter
+        \pagenumbering{Roman}
+
+        \input{frontmatter/titlepage.tex}
+        \input{frontmatter/confidentiality.tex}
+        \input{frontmatter/abstract.tex}
+        \input{frontmatter/acknowledgments.tex}
+
+        \clearpage
+        \tableofcontents
+        
+        \clearpage
+        \phantomsection
+        \addcontentsline{toc}{chapter}{\listfigurename}
+        \listoffigures
+        
+        % Combine List of Tables, Algorithms, and Code Listings into one page
+        \clearpage
+        \phantomsection
+        \addcontentsline{toc}{chapter}{List of Tables, Algorithms, and Code Listings}
+        \listoftables
+        \vspace{-0.3cm}
+        \begingroup
+            \let\clearpage\relax
+            \listofalgorithms
+            \lstlistoflistings 
+        \endgroup
+
+        \printglossary[style=customglossarystyle,type=\acronymtype,title=List of Abbreviations,toctitle=List of Abbreviations]
+
+    \mainmatter
+    \pagestyle{fancy}
+
+        \input{chapters/01_introduction.tex}
+        \input{chapters/02_related-work.tex}
+        \input{chapters/03_methodology.tex}
+        \input{chapters/04_implementation.tex}
+        \input{chapters/05_results.tex}
+        \input{chapters/06_conclusion.tex}
+
+    \appendix
+    \pagestyle{plain}
+
+        \printbibliography[heading=bibintoc]
+        \addcontentsline{toc}{chapter}{Declaration}
+        \input{backmatter/declaration.tex}        
+        \input{backmatter/appendix.tex}
+
+\end{document}
