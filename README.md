@@ -16,11 +16,9 @@ An easy-to-use, modular LaTeX template for seminar papers, bachelor and master t
 
 ## Quick Start
 
-Open the project in [Overleaf](https://www.overleaf.com/latex/templates/your-template-link). Click on `Menu → Copy Project` in the top left to create your own copy of the project. You can then start working right away. No local setup required. Depending on the size of the project, the free Overleaf version may not be sufficient.
+Open the project in [Overleaf](https://www.overleaf.com/read/nrmrmjvwwhnv#ddfbfb). Click on `Menu → Copy Project` in the top left to create your own copy of the project. You can then start working right away. No local setup required. Depending on the size of the project, the free Overleaf version may not be sufficient.
 
-Open the project in [Overleaf](https://www.overleaf.com/latex/templates/your-template-link) and start working on your thesis right away. No local setup required.
-
-[![Overleaf](https://img.shields.io/badge/Open_in-Overleaf-47A141?style=for-the-badge&logo=overleaf)](https://www.overleaf.com/latex/templates/your-template-link)
+[![Overleaf](https://img.shields.io/badge/Open_in-Overleaf-47A141?style=for-the-badge&logo=overleaf)](https://www.overleaf.com/read/nrmrmjvwwhnv#ddfbfb)
 
 Or build locally, which is recommended for offline work. See [local setup](#local-setup) below.
 
