@@ -1,4 +1,7 @@
-# Hochschule-Muenchen-LaTeX-Template
+[![Deutsch](https://img.shields.io/badge/DE-Deutsch-lightgrey?style=for-the-badge&logo=google-translate&logoColor=lightgrey)](https://github.com/Simon-Hi5/Hochschule-Muenchen-LaTeX-Template)&emsp;
+[![English](https://img.shields.io/badge/EN-English-0A84FF?style=for-the-badge&logo=google-translate&logoColor=0A84FF)](https://github.com/Simon-Hi5/Hochschule-Muenchen-LaTeX-Template/tree/english)
+
+# LaTeX Template for Theses at Munich University of Applied Sciences
 
 An easy-to-use, modular LaTeX template for seminar papers, bachelor and master theses tailored to conventions commonly used at Hochschule München. This repository contains a complete example project, ready to open on Overleaf or compile locally.
 
