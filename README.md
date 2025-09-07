@@ -91,6 +91,11 @@ Oder alternativ einfach folgenden Befehl ausführen:
 - Bibliographie wird nicht aktualisiert: Stelle sicher, dass `biber Thesis-Template` ausgeführt wird (oder `make`).
 - Glossar/Abkürzungen fehlen: Führe `makeglossaries Thesis-Template` aus und kompiliere erneut.
 
+# Contributing
+
+Dieses Repository ist ein persönliches Template. Beiträge (Bug-Reports, kleine Fixes, Vorschläge) sind über Issues oder Pull Requests willkommen.  
+Bevor du größere Änderungen einreichst, eröffne bitte zuerst ein Issue, um den Vorschlag zu besprechen.
+
 ## Disclaimer
 
 Dieses LaTeX-Template ist eine private Entwicklung und kein offizielles Template der Hochschule München. Es wird unter der MIT-Lizenz veröffentlicht. Das in diesem Repository enthaltene Logo der Hochschule München ist urheberrechtlich geschützt und Eigentum der Hochschule München. Es unterliegt nicht der MIT-Lizenz dieses Projekts. Alle Rechte am Logo (einschließlich Urheber-, Marken- und Nutzungsrechte) verbleiben ausschließlich bei der Hochschule München. Die Verwendung des Logos in wissenschaftlichen Arbeiten (z.B. Abschlussarbeiten) ist in der Regel gestattet, die Verantwortung für eine rechtmäßige Nutzung liegt jedoch bei den Anwender:innen selbst.
