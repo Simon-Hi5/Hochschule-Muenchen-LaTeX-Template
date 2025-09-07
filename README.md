@@ -91,7 +91,7 @@ Oder alternativ einfach folgenden Befehl ausführen:
 - Bibliographie wird nicht aktualisiert: Stelle sicher, dass `biber Thesis-Template` ausgeführt wird (oder `make`).
 - Glossar/Abkürzungen fehlen: Führe `makeglossaries Thesis-Template` aus und kompiliere erneut.
 
-# Contributing
+## Contributing
 
 Dieses Repository ist ein persönliches Template. Beiträge (Bug-Reports, kleine Fixes, Vorschläge) sind über Issues oder Pull Requests willkommen.  
 Bevor du größere Änderungen einreichst, eröffne bitte zuerst ein Issue, um den Vorschlag zu besprechen.
