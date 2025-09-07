@@ -1,57 +1,57 @@
-\chapter{Implementation}
+\chapter{Implementierung}
 \label{chap:implementation}
 
-\section{Formulas}
+\section{Formeln}
 
-You can include formulas like this: The file processing problem can be modeled as follows. A file $F$ of size $S$ bytes split into chunks of size at most $c$ is:
+Man kann Formeln wie folgt einfügen: Das Dateiverarbeitungsproblem kann wie folgt modelliert werden. Eine Datei $F$ der Größe $S$ Bytes, aufgeteilt in Blöcke mit maximaler Größe $c$, ist:
 \[ F = \langle B_1, B_2, \ldots, B_m \rangle, \qquad m = \left\lceil \frac{S}{c} \right\rceil \]
 
-\section{Algorithms}
+\section{Algorithmen}
 
-You can describe algorithms using pseudocode like this:
+Man kann Algorithmen mithilfe von Pseudocode wie folgt darstellen:
 
 \begin{algorithm}[htbp]
-    \caption{Chunk-based file processing with hashing.}
+    \caption{Blockbasierte Dateiverarbeitung mit Hashing.}
     \label{algo:filehash}
     \begin{algorithmic}[1]
-        \Require File $F$, chunk size $c$
-        \Ensure Record $\langle size, chunk\_count, sha256 \rangle$
+        \Require Datei $F$, Blockgröße $c$
+        \Ensure Datensatz $\langle size, block\_count, sha256 \rangle$
 
-        \State $h \gets \textsc{InitSHA256}()$ \Comment{Initialize digest.}
+        \State $h \gets \textsc{InitSHA256}()$ \Comment{Initialisiere Digest.}
         \State $size \gets \textsc{Length}(F)$
-        \State $chunk\_count \gets 0$
+        \State $block\_count \gets 0$
         \Statex
 
-        \ForAll{$chunk \in \textsc{Read}(F, c)$}
-            \State $\textsc{Update}(h, chunk)$
-            \State $chunk\_count \gets chunk\_count + 1$
+        \ForAll{$block \in \textsc{Read}(F, c)$}
+            \State $\textsc{Update}(h, block)$
+            \State $block\_count \gets block\_count + 1$
         \EndFor
         \Statex
 
         \State $sha256 \gets \textsc{Finalize}(h)$
-        \State \Return $\langle size, chunk\_count, sha256 \rangle$
+        \State \Return $\langle size, block\_count, sha256 \rangle$
     \end{algorithmic}
 \end{algorithm}
 
-You can refer to algorithms like this: Algorithm~\ref{algo:filehash} describes a chunk-based file processing algorithm.
+Man kann auf Algorithmen wie folgt verweisen: Algorithmus~\ref{algo:filehash} beschreibt einen blockbasierten Dateiverarbeitungsalgorithmus.
 
-\section{Lists and Enumerations}
+\section{Listen und Aufzählungen}
 
-You can create lists and enumerations like this:
+Man kann Listen und Aufzählungen wie folgt erstellen:
 
 \begin{enumerate}
-  \item Initialize a SHA-256 digest and read the file size.
-  \item Stream the file in chunks of at most $c$ bytes.
-  \item For each chunk, update the digest and increment the chunk counter.
-  \item Finalize the digest to obtain the hash.
-  \item Return $\langle size,\ chunk\_count,\ sha256 \rangle$.
+  \item Initialisiere einen SHA-256-Digest und lese die Dateigröße.
+  \item Lese die Datei in Blöcken von maximal $c$ Bytes.
+  \item Aktualisiere für jeden Block den Digest und erhöhe den Blockzähler.
+  \item Finalisiere den Digest, um den Hash zu erhalten.
+  \item Gib $\langle size,\ block\_count,\ sha256 \rangle$ zurück.
 \end{enumerate}
 
-\subsection{Code Listings}
+\subsection{Codebeispiele}
 
-You can include source code listings, for example Python code, like this:
+Man kann Quellcode einfügen, zum Beispiel Python-Code, wie folgt:
 
-\begin{lstlisting}[float=htb, caption={Source code of the file processing algorithm.}, label={lst:filehash}]
+\begin{lstlisting}[float=htb, caption={Quellcode des Dateiverarbeitungsalgorithmus.}, label={lst:filehash}]
 import hashlib
 from pathlib import Path
 
