@@ -93,8 +93,7 @@ Oder alternativ einfach folgenden Befehl ausführen:
 
 ## Contributing
 
-Dieses Repository ist ein persönliches Template. Beiträge (Bug-Reports, kleine Fixes, Vorschläge) sind über Issues oder Pull Requests willkommen.  
-Bevor du größere Änderungen einreichst, eröffne bitte zuerst ein Issue, um den Vorschlag zu besprechen.
+Dieses Repository ist ein persönliches Template. Beiträge (Bug-Reports, kleine Fixes, Vorschläge) sind über Issues oder Pull Requests willkommen. Bevor du größere Änderungen einreichst, eröffne bitte zuerst ein Issue, um den Vorschlag zu besprechen.
 
 ## Disclaimer
 
