@@ -75,7 +75,7 @@ Wenn neue TeX-Dateien hinzugefügt werden, müssen sie in `Thesis-Template.tex` 
 
 Für die lokale Einrichtung wird Linux (Debian/Ubuntu) empfohlen. Alle benötigten Pakete können mit folgendem Befehl installiert werden:
 
-`sudo apt-get install -y make texlive texlive-latex-extra texlive-extra-utils texlive-science biber chktex`
+`sudo apt-get install -y make texlive texlive-latex-extra texlive-extra-utils texlive-science texlive-lang-german biber chktex`
 
 Dieser Befehl installiert:
 
