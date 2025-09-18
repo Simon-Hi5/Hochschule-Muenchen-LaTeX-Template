@@ -22,10 +22,10 @@
 
 % Chapter title formatting
 \titleformat{\chapter}
-  {\Huge\bfseries}   % format
-  {\thechapter}      % label
-  {10pt}             % sep
-  {}                 % before-code
+{\Huge\bfseries}   % format
+{\thechapter}      % label
+{10pt}             % sep
+{}                 % before-code
 
 % Redefine command for vertical centering text in X column (tabularx)
 \renewcommand\tabularxcolumn[1]{m{#1}}
@@ -47,32 +47,32 @@
 
 % Define a custom style for listings
 \lstdefinestyle{custom_listing_style}{
-    language=Python,
-    basicstyle=\ttfamily\small,
-    columns=fullflexible,
-    keepspaces=true,
-    frame=tb,
-    rulecolor=\color{black},
-    numbers=left,
-    xleftmargin=2em,
-    framexleftmargin=1.5em,
-    numberstyle=\scriptsize,
-    numbersep=8pt,
-    stepnumber=1,
-    breaklines=true,
-    tabsize=4,
-    belowcaptionskip=12pt,
-    showstringspaces=false
-    morekeywords={self},
-    sensitive=true,
-    emph={}, 
-    morestring=[b]",
-    morecomment=[l]{//},
-    keywordstyle=\color{keywordcolor},
-    stringstyle=\color{stringcolor},
-    commentstyle=\color{commentcolor},
-    emphstyle=\color{emphcolor},
-    escapeinside={(*@}{@*)}
+language=Python,
+basicstyle=\ttfamily\small,
+columns=fullflexible,
+keepspaces=true,
+frame=tb,
+rulecolor=\color{black},
+numbers=left,
+xleftmargin=2em,
+framexleftmargin=1.5em,
+numberstyle=\scriptsize,
+numbersep=8pt,
+stepnumber=1,
+breaklines=true,
+tabsize=4,
+belowcaptionskip=12pt,
+showstringspaces=false
+morekeywords={self},
+sensitive=true,
+emph={},
+morestring=[b]",
+morecomment=[l]{//},
+keywordstyle=\color{keywordcolor},
+stringstyle=\color{stringcolor},
+commentstyle=\color{commentcolor},
+emphstyle=\color{emphcolor},
+escapeinside={(*@}{@*)}
 }
 \lstset{style=custom_listing_style}
 
@@ -101,8 +101,8 @@
   {
     \setlength{\tabcolsep}{2pt}%
     \begin{longtable}[l]{@{}p{2.5cm}@{}p{\dimexpr\linewidth-2.5cm}@{}}
-  }
-  {
+      }
+      {
     \end{longtable}
   }
 
