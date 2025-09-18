@@ -1,0 +1,75 @@
+{
+    "editor.formatOnSave": true,
+    "editor.wordWrap": "on",
+    "latex-workshop.formatting.latex": "latexindent",
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.linting.run": "onType",
+    "latex-workshop.linting.chktex.enabled": true,
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "Build PDF (pdflatex -> biber -> makeglossaries -> pdflatex * 2)",
+            "tools": [
+                "pdflatex",
+                "biber",
+                "makeglossaries",
+                "pdflatex",
+                "pdflatex"
+            ]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOCFILE%.tex"
+            ]
+        },
+        {
+            "name": "biber",
+            "command": "biber",
+            "args": [
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "makeglossaries",
+            "command": "makeglossaries",
+            "args": [
+                "%DOCFILE%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    "latex-workshop.latex.clean.method": "glob",
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux",
+        "*.dvi",
+        "*.log",
+        "*.lot",
+        "*.lol",
+        "*.lof",
+        "*.nls",
+        "*.ilg",
+        "*.nlo",
+        "*.idx",
+        "*.out",
+        "*.toc",
+        "*.ist",
+        "*.glo",
+        "*.blg",
+        "*.acn",
+        "*.bbl",
+        "*.bcf",
+        "*.run.xml",
+        "*.synctex.gz",
+        "*.gls",
+        "*.alg",
+        "*.glg",
+        "*.acr",
+        "*.loa"
+    ]
+}

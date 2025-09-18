@@ -23,8 +23,8 @@ You can describe algorithms using pseudocode like this:
         \Statex
 
         \ForAll{$chunk \in \textsc{Read}(F, c)$}
-            \State $\textsc{Update}(h, chunk)$
-            \State $chunk\_count \gets chunk\_count + 1$
+        \State $\textsc{Update}(h, chunk)$
+        \State $chunk\_count \gets chunk\_count + 1$
         \EndFor
         \Statex
 
@@ -40,11 +40,11 @@ You can refer to algorithms like this: Algorithm~\ref{algo:filehash} describes a
 You can create lists and enumerations like this:
 
 \begin{enumerate}
-  \item Initialize a SHA-256 digest and read the file size.
-  \item Stream the file in chunks of at most $c$ bytes.
-  \item For each chunk, update the digest and increment the chunk counter.
-  \item Finalize the digest to obtain the hash.
-  \item Return $\langle size,\ chunk\_count,\ sha256 \rangle$.
+    \item Initialize a SHA-256 digest and read the file size.
+    \item Stream the file in chunks of at most $c$ bytes.
+    \item For each chunk, update the digest and increment the chunk counter.
+    \item Finalize the digest to obtain the hash.
+    \item Return $\langle size,\ chunk\_count,\ sha256 \rangle$.
 \end{enumerate}
 
 \subsection{Code Listings}

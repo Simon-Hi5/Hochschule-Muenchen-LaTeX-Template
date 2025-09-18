@@ -3,7 +3,7 @@ MAIN ?= $(basename $(firstword $(wildcard *.tex)))
 TEX  := $(MAIN).tex
 PDF  := $(MAIN).pdf
 
-LATEX    := pdflatex -synctex=1 -interaction=nonstopmode
+LATEX    := pdflatex -synctex=1 -interaction=nonstopmode -file-line-error
 BIBER    := biber
 GLOSSARY := makeglossaries
 TEXTIDOTE:= textidote
@@ -15,7 +15,7 @@ CONTENT_DIR := content
 
 build: pdf clean
 
-# Generate PDF with bibliography, glossary, and table of contents
+# Build PDF (pdflatex -> biber -> makeglossaries -> pdflatex * 2)
 pdf:
 	$(LATEX) $(TEX)
 	$(BIBER) $(MAIN)
