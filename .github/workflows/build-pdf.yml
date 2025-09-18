@@ -1,0 +1,30 @@
+name: Build PDF
+
+on:
+  push:
+    branches: [ "main", "english" ]
+  pull_request:
+    branches: [ "main", "english" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Install LaTeX toolchain
+      run: sudo apt-get update && sudo apt-get install -y make texlive texlive-latex-extra texlive-extra-utils texlive-science biber chktex
+
+    - name: Build PDF via Makefile
+      run: make
+          
+    - name: Upload PDF artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: pdf
+        path: |
+          ./*.pdf
+        if-no-files-found: error
