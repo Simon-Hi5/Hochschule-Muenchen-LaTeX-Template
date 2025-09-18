@@ -3,97 +3,97 @@
 
 # LaTeX Template for Theses at HM Hochschule München University of Applied Sciences
 
-An easy-to-use, modular LaTeX template for seminar papers, bachelor and master theses tailored to conventions commonly used at Hochschule München. This repository contains a complete example project, ready to open on Overleaf or compile locally.
+Eine einfach zu verwendende, modulare LaTeX-Vorlage für Seminararbeiten, Bachelor- und Masterarbeiten, angepasst an die an der Hochschule München üblichen Konventionen. Dieses Repository enthält ein komplettes Beispielprojekt, das direkt in Overleaf geöffnet oder lokal kompiliert werden kann.
 
 [![View PDF](https://img.shields.io/badge/View-Thesis_Template-red?style=for-the-badge&logo=readdotcv&logoColor=red)](Thesis-Template.pdf)
 
 ## Highlights
 
-- Modular structure: separate files for frontmatter, chapters, configuration, and backmatter.
-- Bibliography support with BibLaTeX and Biber.
-- Support for figures, tables, algorithms/pseudocode, code listings, abbreviations/glossaries, and appendices.
-- A Makefile for an easy build workflow.
-- VS Code configuration (extensions and settings) for building PDF, formatting, linting, and spell checking
+- Modulare Struktur: separate Dateien für Frontmatter, Kapitel, Konfiguration und Backmatter.
+- Bibliographieunterstützung mit BibLaTeX und Biber.
+- Unterstützung für Abbildungen, Tabellen, Algorithmen/Pseudocode, Code-Listings, Abkürzungen/Glossare und Anhänge.
+- Ein Makefile für einen einfachen Build-Workflow.
+- VS Code-Konfiguration (Erweiterungen und Einstellungen) für PDF-Erstellung, Formatierung, Linting und Rechtschreibprüfung.
 
-## Quick Start
+## Schnellstart
 
-Open the project in [Overleaf](https://www.overleaf.com/read/nrmrmjvwwhnv#ddfbfb). Make sure to log in or create a free Overleaf account first, as you won’t be able to copy the project otherwise. Click on `Menu → Copy Project` in the top left to create your own copy of the project. You can then start working right away. No local setup required. Depending on the size of the project, the free Overleaf version may not be sufficient.
+Öffne das Projekt in [Overleaf](https://www.overleaf.com/read/nrmrmjvwwhnv#ddfbfb). Stelle sicher, dass du eingeloggt bist oder ein kostenloses Overleaf-Konto erstellt hast, da du das Projekt sonst nicht kopieren kannst. Klicke oben links auf `Menu → Copy Project`, um eine eigene Kopie des Projekts zu erstellen. Danach kannst du sofort loslegen. Keine lokale Einrichtung erforderlich. Je nach Projektgröße kann die kostenlose Overleaf-Version nicht ausreichen.
 
 [![Overleaf](https://img.shields.io/badge/Open_in-Overleaf-47A141?style=for-the-badge&logo=overleaf)](https://www.overleaf.com/read/nrmrmjvwwhnv#ddfbfb)
 
-Or build locally, which is recommended for offline work. See [local setup](#local-setup) below.
+Alternativ kann lokal gebaut werden, was für Offline-Arbeiten empfohlen wird. Siehe [Lokale Einrichtung](#lokale-einrichtung) unten.
 
-## Project Structure
+## Projektstruktur
 
 ```
-├── Thesis-Template.tex      # Main entry file (includes config and content)
-├── makefile                 # Convenience wrapper for build steps
+├── Thesis-Template.tex      # Haupteinstiegsdatei (beinhaltet Konfig & Inhalte)
+├── makefile                 # Komfort-Skript für Build-Schritte
 │
-├── config/                  # Configuration files
-│   ├── packages.tex         # Package imports
-│   ├── settings.tex         # Settings and styling
-│   ├── abbreviations.tex    # Glossary/abbreviations definitions
-│   └── literature.bib       # BibLaTeX bibliography file
+├── config/                  # Konfigurationsdateien
+│   ├── packages.tex         # Paketimporte
+│   ├── settings.tex         # Einstellungen & Layout
+│   ├── abbreviations.tex    # Glossar-/Abkürzungsdefinitionen
+│   └── literature.bib       # BibLaTeX-Bibliografiedatei
 │
-├── frontmatter/             # Modular front matter
+├── frontmatter/             # Modulares Frontmatter
 │   ├── titlepage.tex
 │   ├── abstract.tex
 │   ├── acknowledgments.tex
 │   └── confidentiality.tex
 │
-├── chapters/                # Main content chapters
+├── chapters/                # Hauptinhaltskapitel
 │   ├── 01_introduction.tex
 │   ├── 02_background.tex
 │   ├── ...
 │   └── 06_conclusion.tex
 │
-├── backmatter/              # Modular back matter
+├── backmatter/              # Modulares Backmatter
 │   ├── appendix.tex
 │   └── declaration.tex
 │
-├── figures/                 # Images, logos, and other assets
+├── figures/                 # Bilder, Logos und andere Assets
 │
-├── .vscode/                 # VS Code configuration for consistent editing
-│   ├── extensions.json      # Recommended extensions for LaTeX development
-│   └── settings.json        # Editor settings (e.g., formatting, linting)
+├── .vscode/                 # VS Code-Konfiguration für konsistentes Editieren
+│   ├── extensions.json      # Empfohlene Erweiterungen für LaTeX-Entwicklung
+│   └── settings.json        # Editoreinstellungen (z. B. Formatierung, Linting)
 │
-└── .github/workflows/       # GitHub Actions for CI/CD
-    └── build-pdf.yml        # Workflow to automatically build the PDF
+└── .github/workflows/       # GitHub Actions für CI/CD
+    └── build-pdf.yml        # Workflow zum automatischen PDF-Build
 ```
 
-When adding new TeX files, include them in `Thesis-Template.tex` using `\input{path/to/file.tex}`.
+Wenn neue TeX-Dateien hinzugefügt werden, müssen sie in `Thesis-Template.tex` mit `\input{path/to/file.tex}` eingebunden werden.
 
-## Usage Examples
+## Anwendungsbeispiele
 
-- See the example content in `chapters/` for usage examples, including how to add and reference figures, tables, algorithms, code listings, and other common elements.
-- Define bibliographic entries in `config/literature.bib`.
-- Define abbreviations in `config/abbreviations.tex`.
+- Siehe die Beispielinhalte in `chapters/` für Anwendungsbeispiele, einschließlich der Einbindung und Referenzierung von Abbildungen, Tabellen, Algorithmen, Code-Listings und anderen gängigen Elementen.
+- Definiere bibliographische Einträge in `config/literature.bib`.
+- Definiere Abkürzungen in `config/abbreviations.tex`.
 
-## Local Setup
+## Lokale Einrichtung
 
-### Requirements
+### Voraussetzungen
 
-For the local setup, Linux (Debian/Ubuntu) is recommended. You can install all necessary packages with:
+Für die lokale Einrichtung wird Linux (Debian/Ubuntu) empfohlen. Alle benötigten Pakete können mit folgendem Befehl installiert werden:
 
 `sudo apt-get install -y make texlive texlive-latex-extra texlive-extra-utils texlive-science biber chktex`
 
-This command installs:
+Dieser Befehl installiert:
 
-- TeX Live: LaTeX distribution
-- Biber: Bibliography handling with BibLaTeX
-- make: Automates the build process
-- latexindent: Formats LaTeX source code nicely
-- chktex: Checks for typographic and other LaTeX issues
+- TeX Live: LaTeX-Distribution
+- Biber: Bibliographieverwaltung mit BibLaTeX
+- make: Automatisiert den Build-Prozess
+- latexindent: Formatiert LaTeX-Quellcode ordentlich
+- chktex: Überprüft auf typografische und andere LaTeX-Probleme
 
-Visual Studio Code (VS Code) is recommended as the editor, as all necessary extensions and settings for formatting, linting, and spell checking are already pre-configured in the `.vscode` folder.
+Visual Studio Code (VS Code) wird als Editor empfohlen, da alle notwendigen Erweiterungen und Einstellungen für Formatierung, Linting und Rechtschreibprüfung bereits im Ordner `.vscode` vorkonfiguriert sind.
 
-### Build PDF
+### PDF bauen
 
-To build the final PDF, simply run:
+Um das finale PDF zu erstellen, führe einfach aus:
 
 `make`
 
-This will execute the following sequence:
+Dies führt folgende Schritte aus:
 
 1. `pdflatex -synctex=1 -interaction=nonstopmode -file-line-error Thesis-Template.tex`
 2. `biber Thesis-Template`
@@ -103,8 +103,8 @@ This will execute the following sequence:
 
 ## Contributing
 
-This repository is a personal template. Contributions (bug reports, small fixes, suggestions) are welcome via issues or pull requests.
+Dieses Repository ist ein persönliches Template. Beiträge (Fehlerberichte, Korrekturen, Vorschläge) sind über Issues oder Pull Requests willkommen.
 
 ## Disclaimer
 
-This LaTeX template is a private development and not an official template of HM Hochschule München University of Applied Sciences. It is published under the MIT License. The HM Hochschule München University of Applied Sciences logo included in this repository is protected by copyright and is the property of the university. It is not covered by the MIT License of this project. All rights to the logo (including copyright, trademark, and usage rights) remain exclusively with HM Hochschule München University of Applied Sciences. Use of the logo in academic work (e.g., theses) is generally permitted, but users themselves are responsible for ensuring lawful usage.
+Dieses LaTeX-Template ist eine private Entwicklung und kein offizielles Template der Hochschule München. Es wird unter der MIT-Lizenz veröffentlicht. Das in diesem Repository enthaltene Logo der Hochschule München ist urheberrechtlich geschützt und Eigentum der Hochschule München. Es unterliegt nicht der MIT-Lizenz dieses Projekts. Alle Rechte am Logo (einschließlich Urheber-, Marken- und Nutzungsrechte) verbleiben ausschließlich bei der Hochschule München. Die Verwendung des Logos in wissenschaftlichen Arbeiten (z.B. Abschlussarbeiten) ist in der Regel gestattet, die Verantwortung für eine rechtmäßige Nutzung liegt jedoch bei den Anwender:innen selbst.

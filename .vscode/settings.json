@@ -5,7 +5,7 @@
     "latex-workshop.view.pdf.viewer": "tab",
     "latex-workshop.linting.run": "onType",
     "latex-workshop.linting.chktex.enabled": true,
-    "ltex.language": "en-US",
+    "ltex.language": "de-DE",
     "ltex.enabled": [
         "bibtex",
         "latex"
