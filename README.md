@@ -103,7 +103,7 @@ This will execute the following sequence:
 
 ## Contributing
 
-This repository is a personal template. Contributions (bug reports, small fixes, suggestions) are welcome via issues or pull requests. Before submitting larger changes, open an issue to discuss the proposal.
+This repository is a personal template. Contributions (bug reports, small fixes, suggestions) are welcome via issues or pull requests.
 
 ## Disclaimer
 
