@@ -1,7 +1,7 @@
-[![Deutsch](https://img.shields.io/badge/DE-Deutsch-lightgrey?style=for-the-badge&logo=google-translate&logoColor=lightgrey)](https://github.com/Simon-Hi5/Hochschule-Muenchen-LaTeX-Template)&emsp;
-[![English](https://img.shields.io/badge/EN-English-0A84FF?style=for-the-badge&logo=google-translate&logoColor=0A84FF)](https://github.com/Simon-Hi5/Hochschule-Muenchen-LaTeX-Template/tree/english)
+[![Deutsch](https://img.shields.io/badge/DE-Deutsch-0A84FF?style=for-the-badge&logo=google-translate&logoColor=0A84FF)](https://github.com/Simon-Hi5/Hochschule-Muenchen-LaTeX-Template)&emsp;
+[![English](https://img.shields.io/badge/EN-English-lightgrey?style=for-the-badge&logo=google-translate&logoColor=lightgrey)](https://github.com/Simon-Hi5/Hochschule-Muenchen-LaTeX-Template/tree/english)
 
-# LaTeX Template for Theses at HM Hochschule München University of Applied Sciences
+# LaTeX-Vorlage für Abschlussarbeiten an der Hochschule München
 
 Eine einfach zu verwendende, modulare LaTeX-Vorlage für Seminararbeiten, Bachelor- und Masterarbeiten, angepasst an die an der Hochschule München üblichen Konventionen. Dieses Repository enthält ein komplettes Beispielprojekt, das direkt in Overleaf geöffnet oder lokal kompiliert werden kann.
 
