@@ -1,4 +1,4 @@
-[![German](https://img.shields.io/badge/DE-German-lightgrey?style=for-the-badge&logo=google-translate&logoColor=lightgrey)](https://github.com/Simon-Hi5/Hochschule-Muenchen-LaTeX-Template)&emsp;
+[![Deutsch](https://img.shields.io/badge/DE-Deutsch-lightgrey?style=for-the-badge&logo=google-translate&logoColor=lightgrey)](https://github.com/Simon-Hi5/Hochschule-Muenchen-LaTeX-Template)&emsp;
 [![English](https://img.shields.io/badge/EN-English-0A84FF?style=for-the-badge&logo=google-translate&logoColor=0A84FF)](https://github.com/Simon-Hi5/Hochschule-Muenchen-LaTeX-Template/tree/english)
 
 # LaTeX Template for Theses at HM Hochschule München University of Applied Sciences
