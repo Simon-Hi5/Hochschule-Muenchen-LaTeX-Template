@@ -5,6 +5,11 @@
     "latex-workshop.view.pdf.viewer": "tab",
     "latex-workshop.linting.run": "onType",
     "latex-workshop.linting.chktex.enabled": true,
+    "ltex.language": "en-US",
+    "ltex.enabled": [
+        "bibtex",
+        "latex"
+    ],
     "latex-workshop.latex.recipes": [
         {
             "name": "Build PDF (pdflatex -> biber -> makeglossaries -> pdflatex * 2)",
