@@ -91,7 +91,7 @@ Visual Studio Code (VS Code) wird als Editor empfohlen, da alle notwendigen Erwe
 
 ### PDF bauen
 
-Um das finale PDF zu erstellen, führe einfach aus:
+Zuerst muss das Repository heruntergeladen oder geklont werden. Anschließend führe den folgenden Befehl im Hauptverzeichnis des Projekts aus, um das finale PDF zu erstellen:
 
 ```
 make
