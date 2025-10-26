@@ -5,7 +5,7 @@
 
 An easy-to-use, modular LaTeX template for seminar papers, bachelor and master theses tailored to conventions commonly used at Hochschule München. This repository contains a complete example project, ready to open on Overleaf or compile locally.
 
-[![View PDF](https://img.shields.io/badge/View-Thesis_Template-red?style=for-the-badge&logo=readdotcv&logoColor=red)](Thesis-Template.pdf)
+[![View PDF](https://img.shields.io/badge/View_PDF-Thesis_Template-red?style=for-the-badge&logo=readdotcv&logoColor=red)](Thesis-Template.pdf)
 
 ## Highlights
 
@@ -53,12 +53,9 @@ Or build locally, which is recommended for offline work. See [local setup](#loca
 │
 ├── figures/                 # Images, logos, and other assets
 │
-├── .vscode/                 # VS Code configuration for consistent editing
-│   ├── extensions.json      # Recommended extensions for LaTeX development
-│   └── settings.json        # Editor settings (e.g., formatting, linting)
-│
-└── .github/workflows/       # GitHub Actions for CI/CD
-    └── build-pdf.yml        # Workflow to automatically build the PDF
+└── .vscode/                 # VS Code configuration for consistent editing
+    ├── extensions.json      # Recommended extensions for LaTeX development
+    └── settings.json        # Editor settings (e.g., formatting, linting)
 ```
 
 When adding new TeX files, include them in `Thesis-Template.tex` using `\input{path/to/file.tex}`.
@@ -85,7 +82,7 @@ This command installs:
 - latexindent: Formats LaTeX source code nicely
 - chktex: Checks for typographic and other LaTeX issues
 
-Visual Studio Code (VS Code) is recommended as the editor, as all necessary extensions and settings for formatting, linting, and spell checking are already pre-configured in the `.vscode` folder.
+[Visual Studio Code (VS Code)](https://code.visualstudio.com/) is recommended as the editor, as all necessary extensions and settings for formatting, linting, and spell checking are already configured in the `.vscode` folder. This includes the configuration for the [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) extension and English spell checking with [LTeX](https://marketplace.visualstudio.com/items?itemName=valentjn.vscode-ltex). The settings define a complete build process and automate formatting as well as linting.
 
 ### Build PDF
 
