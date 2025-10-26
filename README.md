@@ -72,7 +72,9 @@ When adding new TeX files, include them in `Thesis-Template.tex` using `\input{p
 
 For the local setup, Linux (Debian/Ubuntu) is recommended. You can install all necessary packages with:
 
-`sudo apt-get install -y make texlive texlive-latex-extra texlive-extra-utils texlive-science biber chktex`
+```
+sudo apt-get install -y make texlive texlive-latex-extra texlive-extra-utils texlive-science biber chktex
+```
 
 This command installs:
 
@@ -88,7 +90,9 @@ This command installs:
 
 To build the final PDF, simply run:
 
-`make`
+```
+make
+```
 
 This will execute the following sequence:
 
