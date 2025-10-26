@@ -3,31 +3,31 @@
 
 # LaTeX-Vorlage für Abschlussarbeiten an der Hochschule München
 
-Eine einfach zu verwendende, modulare LaTeX-Vorlage für Seminararbeiten, Bachelor- und Masterarbeiten, angepasst an die an der Hochschule München üblichen Konventionen. Dieses Repository enthält ein komplettes Beispielprojekt, das direkt in Overleaf geöffnet oder lokal kompiliert werden kann.
+Eine einfach zu verwendende, modulare LaTeX-Vorlage für Seminar-, Bachelor- und Masterarbeiten, die sich an den üblichen Konventionen der Hochschule München orientiert. Dieses Repository enthält ein komplettes Beispielprojekt, das direkt in Overleaf geöffnet oder lokal kompiliert werden kann.
 
-[![View PDF](https://img.shields.io/badge/View-Thesis_Template-red?style=for-the-badge&logo=readdotcv&logoColor=red)](Thesis-Template.pdf)
+[![PDF](https://img.shields.io/badge/View_PDF-Thesis_Template-red?style=for-the-badge&logo=readdotcv&logoColor=red)](Thesis-Template.pdf)
 
 ## Highlights
 
-- Modulare Struktur: separate Dateien für Frontmatter, Kapitel, Konfiguration und Backmatter.
-- Bibliographieunterstützung mit BibLaTeX und Biber.
-- Unterstützung für Abbildungen, Tabellen, Algorithmen/Pseudocode, Code-Listings, Abkürzungen/Glossare und Anhänge.
-- Ein Makefile für einen einfachen Build-Workflow.
+- Modulare Struktur: separate Dateien für Vorspann, Kapitel, Konfiguration und Schlussteil.
+- Unterstützung für Literaturverwaltung mit BibLaTeX und Biber.
+- Unterstützung für Abbildungen, Tabellen, Algorithmen/Pseudocode, Quellcode-Listings, Abkürzungs-/Glossarverzeichnisse und Anhänge.
+- Ein Makefile für einen einfachen Build-Prozess.
 - VS Code-Konfiguration (Erweiterungen und Einstellungen) für PDF-Erstellung, Formatierung, Linting und Rechtschreibprüfung.
 
 ## Schnellstart
 
-Öffne das Projekt in [Overleaf](https://www.overleaf.com/read/nrmrmjvwwhnv#ddfbfb). Stelle sicher, dass du eingeloggt bist oder ein kostenloses Overleaf-Konto erstellt hast, da du das Projekt sonst nicht kopieren kannst. Klicke oben links auf `Menu → Copy Project`, um eine eigene Kopie des Projekts zu erstellen. Danach kannst du sofort loslegen. Keine lokale Einrichtung erforderlich. Je nach Projektgröße kann die kostenlose Overleaf-Version nicht ausreichen.
+Öffne das Projekt in [Overleaf](https://www.overleaf.com/read/nrmrmjvwwhnv#ddfbfb). Stelle sicher, dass du eingeloggt bist oder ein kostenloses Overleaf-Konto erstellt hast, da du das Projekt sonst nicht kopieren kannst. Klicke oben links auf `Menu → Copy Project`, um eine eigene Kopie des Projekts zu erstellen. Danach kannst du sofort loslegen. Es ist keine lokale Einrichtung erforderlich. Je nach Projektgröße reicht die kostenlose Overleaf-Version eventuell nicht aus.
 
 [![Overleaf](https://img.shields.io/badge/Open_in-Overleaf-47A141?style=for-the-badge&logo=overleaf)](https://www.overleaf.com/read/nrmrmjvwwhnv#ddfbfb)
 
-Alternativ kann lokal gebaut werden, was für Offline-Arbeiten empfohlen wird. Siehe [Lokale Einrichtung](#lokale-einrichtung) unten.
+Alternativ kann das Projekt lokal erstellt werden, was für das Offline-Arbeiten empfohlen wird. Siehe Abschnitt [Lokale Einrichtung](#lokale-einrichtung).
 
 ## Projektstruktur
 
 ```
-├── Thesis-Template.tex      # Haupteinstiegsdatei (beinhaltet Konfig & Inhalte)
-├── makefile                 # Komfort-Skript für Build-Schritte
+├── Thesis-Template.tex      # Haupteinstiegsdatei (lädt Konfiguration & Inhalte)
+├── makefile                 # Hilfsskript für den Build-Prozess 
 │
 ├── config/                  # Konfigurationsdateien
 │   ├── packages.tex         # Paketimporte
@@ -35,39 +35,36 @@ Alternativ kann lokal gebaut werden, was für Offline-Arbeiten empfohlen wird. S
 │   ├── abbreviations.tex    # Glossar-/Abkürzungsdefinitionen
 │   └── literature.bib       # BibLaTeX-Bibliografiedatei
 │
-├── frontmatter/             # Modulares Frontmatter
+├── frontmatter/             # Modularer Vorspann
 │   ├── titlepage.tex
 │   ├── abstract.tex
 │   ├── acknowledgments.tex
 │   └── confidentiality.tex
 │
-├── chapters/                # Hauptinhaltskapitel
+├── chapters/                # Kapitel (Hauptinhalt)
 │   ├── 01_introduction.tex
 │   ├── 02_background.tex
 │   ├── ...
 │   └── 06_conclusion.tex
 │
-├── backmatter/              # Modulares Backmatter
+├── backmatter/              # Modularer Schlussteil
 │   ├── appendix.tex
 │   └── declaration.tex
 │
-├── figures/                 # Bilder, Logos und andere Assets
+├── figures/                 # Bilder, Logos und andere Ressourcen
 │
-├── .vscode/                 # VS Code-Konfiguration für konsistentes Editieren
-│   ├── extensions.json      # Empfohlene Erweiterungen für LaTeX-Entwicklung
-│   └── settings.json        # Editoreinstellungen (z. B. Formatierung, Linting)
-│
-└── .github/workflows/       # GitHub Actions für CI/CD
-    └── build-pdf.yml        # Workflow zum automatischen PDF-Build
+└── .vscode/                 # VS Code-Konfiguration für konsistentes Editieren
+    ├── extensions.json      # Empfohlene Erweiterungen für LaTeX-Entwicklung
+    └── settings.json        # Editor-Einstellungen (z. B. Formatierung, Linting)
 ```
 
-Wenn neue TeX-Dateien hinzugefügt werden, müssen sie in `Thesis-Template.tex` mit `\input{path/to/file.tex}` eingebunden werden.
+Neu hinzugefügte TeX-Dateien müssen in `Thesis-Template.tex` mit `\input{path/to/file.tex}` eingebunden werden.
 
 ## Anwendungsbeispiele
 
-- Siehe die Beispielinhalte in `chapters/` für Anwendungsbeispiele, einschließlich der Einbindung und Referenzierung von Abbildungen, Tabellen, Algorithmen, Code-Listings und anderen gängigen Elementen.
-- Definiere bibliographische Einträge in `config/literature.bib`.
-- Definiere Abkürzungen in `config/abbreviations.tex`.
+- Die Beispielinhalte in `chapters/` zeigen die Einbindung und Referenzierung von Abbildungen, Tabellen, Algorithmen, Quellcode-Listings und weiteren gängigen Elementen.
+- Literaturangaben werden in `config/literature.bib` definiert.
+- Abkürzungen werden in `config/abbreviations.tex` definiert.
 
 ## Lokale Einrichtung
 
@@ -82,22 +79,22 @@ sudo apt-get install -y make texlive texlive-latex-extra texlive-extra-utils tex
 Dieser Befehl installiert:
 
 - TeX Live: LaTeX-Distribution
-- Biber: Bibliographieverwaltung mit BibLaTeX
+- Biber: Literaturverwaltung mit BibLaTeX
 - make: Automatisiert den Build-Prozess
 - latexindent: Formatiert LaTeX-Quellcode ordentlich
-- chktex: Überprüft auf typografische und andere LaTeX-Probleme
+- chktex: Überprüft auf typografische Fehler und sonstige LaTeX-Probleme
 
-Visual Studio Code (VS Code) wird als Editor empfohlen, da alle notwendigen Erweiterungen und Einstellungen für Formatierung, Linting und Rechtschreibprüfung bereits im Ordner `.vscode` vorkonfiguriert sind.
+Als Editor wird [Visual Studio Code (VS Code)](https://code.visualstudio.com/) empfohlen, da alle notwendigen Erweiterungen und Einstellungen für Formatierung, Linting und Rechtschreibprüfung bereits im Ordner `.vscode` konfiguriert sind. Dies schließt die Konfiguration für die Erweiterung [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) und die deutsche Rechtschreibprüfung mit [LTeX](https://marketplace.visualstudio.com/items?itemName=valentjn.vscode-ltex) ein. Die Einstellungen definieren einen vollständigen Build-Prozess und automatisieren Formatierung sowie Linting.
 
-### PDF bauen
+### PDF erstellen
 
-Zuerst muss das Repository heruntergeladen oder geklont werden. Anschließend führe den folgenden Befehl im Hauptverzeichnis des Projekts aus, um das finale PDF zu erstellen:
+Zuerst muss das Repository heruntergeladen oder geklont werden. Führe anschließend den folgenden Befehl im Hauptverzeichnis des Projekts aus, um das PDF zu erstellen:
 
 ```
 make
 ```
 
-Dies führt folgende Schritte aus:
+Dadurch werden folgende Schritte ausgeführt:
 
 1. `pdflatex -synctex=1 -interaction=nonstopmode -file-line-error Thesis-Template.tex`
 2. `biber Thesis-Template`
