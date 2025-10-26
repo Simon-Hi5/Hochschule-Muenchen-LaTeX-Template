@@ -17,9 +17,9 @@ Eine einfach zu verwendende, modulare LaTeX-Vorlage für Seminar-, Bachelor- und
 
 ## Schnellstart
 
-Öffne das Projekt in [Overleaf](https://www.overleaf.com/read/nrmrmjvwwhnv#ddfbfb). Stelle sicher, dass du eingeloggt bist oder ein kostenloses Overleaf-Konto erstellt hast, da du das Projekt sonst nicht kopieren kannst. Klicke oben links auf `Menu → Copy Project`, um eine eigene Kopie des Projekts zu erstellen. Danach kannst du sofort loslegen. Es ist keine lokale Einrichtung erforderlich. Je nach Projektgröße reicht die kostenlose Overleaf-Version eventuell nicht aus.
+Öffne das Projekt in [Overleaf](https://www.overleaf.com/read/sgmwpkppjwvh#91c355). Stelle sicher, dass du eingeloggt bist oder ein kostenloses Overleaf-Konto erstellt hast, da du das Projekt sonst nicht kopieren kannst. Klicke oben links auf `Menu → Copy Project`, um eine eigene Kopie des Projekts zu erstellen. Danach kannst du sofort loslegen. Es ist keine lokale Einrichtung erforderlich. Je nach Projektgröße reicht die kostenlose Overleaf-Version eventuell nicht aus.
 
-[![Overleaf](https://img.shields.io/badge/Open_in-Overleaf-47A141?style=for-the-badge&logo=overleaf)](https://www.overleaf.com/read/nrmrmjvwwhnv#ddfbfb)
+[![Overleaf](https://img.shields.io/badge/Open_in-Overleaf-47A141?style=for-the-badge&logo=overleaf)](https://www.overleaf.com/read/sgmwpkppjwvh#91c355)
 
 Alternativ kann das Projekt lokal erstellt werden, was für das Offline-Arbeiten empfohlen wird. Siehe Abschnitt [Lokale Einrichtung](#lokale-einrichtung).
 
